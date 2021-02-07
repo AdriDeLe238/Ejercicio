@@ -1,0 +1,50 @@
+
+<div class = "fondo">
+
+    <mat-toolbar class="app-header">
+        <div><a class="navbar-brand" href="#"><img src="../../assets/logo-initial.jpg" width="70px" height="45px" alt=""></a></div>
+        <span class="nav-tool-items">
+        </span>
+      </mat-toolbar>
+    <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+        <mat-card class="box">
+
+        <img src="../../assets/logo-initial.jpg" width="70px" height="45px" alt="">
+        <br>
+        <mat-card-header>
+            <mat-card-title>Iniciar sesión</mat-card-title>
+        </mat-card-header>
+    
+        <form class="example-form">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input #usr type="email" id="correo" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. pat@example.com">
+                    <mat-hint>Inserte Email</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Por favor ingresa un email válido
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email es un <strong>campo obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field>
+                <br>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input #pass type="password" id="pass" matInput [formControl]="contraFormControl">
+                    <mat-error *ngIf="contraFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      
+                    </mat-error>
+                    <mat-error *ngIf="contraFormControl.hasError('required')">
+                      La contraseña es un campo  <strong>obligatorio</strong>
+                    </mat-error>
+                </mat-form-field>
+            <button mat-stroked-button color="primary" class="btn-block" (click)="iniciar(usr.value, pass.value)">Iniciar</button>
+            </mat-card-content>
+        </form>
+        </mat-card>
+    </div>
+</div>
