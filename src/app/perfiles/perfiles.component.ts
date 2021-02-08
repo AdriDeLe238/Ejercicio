@@ -15,8 +15,8 @@ export class PerfilesComponent implements OnInit {
  getAll(){
    this.perfil.getAll()
    .subscribe( todos => {
-      //console.log(todos);
-      this.array = todos;
+      console.log(todos);
+      return this.array = todos;
    });
  }
 
