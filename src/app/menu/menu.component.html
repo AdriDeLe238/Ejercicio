@@ -1,7 +1,8 @@
 <mat-toolbar color="primary" class="app-header">
-    <div><a href="#" target="_blank" class="positronx">Demo</a></div>
-    <span class="nav-tool-items">
-      <a mat-button routerLink="signin" routerLinkActive="active">Signin</a>
-      <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Signup</a>
+  <div><a class="navbar-brand" href="#"><img src="../../assets/logo-initial.jpg" width="70px" height="45px" alt=""></a></div>    <span class="nav-tool-items">
+      <a mat-button [routerLink]="['/post']" routerLinkActive="active">Post</a>
+      <a mat-button [routerLink]="['/coment']" routerLinkActive="active">Comentarios</a>
+      <a mat-button [routerLink]="['/perfil']" routerLinkActive="active">Perfiles</a>
+      <a mat-button mat-raised-button [routerLink]="['/inicio']" routerLinkActive="active">Salir</a>
     </span>
   </mat-toolbar>

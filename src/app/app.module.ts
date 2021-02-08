@@ -10,7 +10,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './inicio/inicio.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PerfilesComponent } from './perfiles/perfiles.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
+import { PostComponent } from './post/post.component'; 
 
 
 
@@ -19,7 +24,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     SigninComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    InicioComponent,
+    PerfilesComponent,
+    ComentariosComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule, 
     FormsModule,
     ReactiveFormsModule, 
-    HttpClientModule
+    HttpClientModule, NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

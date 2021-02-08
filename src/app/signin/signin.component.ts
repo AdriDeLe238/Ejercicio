@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms'; 
 import {ErrorStateMatcher} from '@angular/material/core'; 
+import { Router } from '@angular/router';
+import { MensajesService } from '../Services/mensajes.service';
+
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -26,7 +29,7 @@ export class SigninComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor() { }
+  constructor(private router: Router, private mensaje: MensajesService) { }
 
   ngOnInit(): void {
   }
@@ -39,13 +42,14 @@ export class SigninComponent implements OnInit {
     if(correo == usr){
       if(contra == pass){
         console.log("si entro al la pagina");
+        this.mensaje.mensaje('success', 'BIENVENIDO', '');
+        this.router.navigate(['/admin']);
       }else{
-        console.log("no se puso gg");
+        this.mensaje.mensaje('error', '', 'Correo o contraseña incorrecta');
       }
     }else {
-        console.log("no se puso gg");
+      this.mensaje.mensaje('error', '', 'Correo o contraseña incorrecta');
     }
-
   }
 
 }
