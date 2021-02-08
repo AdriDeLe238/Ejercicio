@@ -1,7 +1,6 @@
-export class comments{
-    postId: number; 
+export interface comments{
+    userId: number; 
     id: number; 
-    name: string; 
-    email: string;
+    title: string;
     body: string; 
 }

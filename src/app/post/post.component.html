@@ -1,1 +1,23 @@
 <app-menu></app-menu>
+<button (click)="getAllTasks()">Click!!</button>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of array">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--<tr *ngFor="let item of getAllTasks()">-->

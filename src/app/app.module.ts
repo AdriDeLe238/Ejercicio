@@ -17,6 +17,7 @@ import { PerfilesComponent } from './perfiles/perfiles.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { PostComponent } from './post/post.component'; 
 
+import { SpostService } from './Services/spost.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { PostComponent } from './post/post.component';
     ReactiveFormsModule, 
     HttpClientModule, NgbModule
   ],
-  providers: [],
+  providers: [SpostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
