@@ -18,6 +18,7 @@ import { ComentariosComponent } from './comentarios/comentarios.component';
 import { PostComponent } from './post/post.component'; 
 
 import { SpostService } from './Services/spost.service';
+import { PublicacionesComponent } from './publicaciones/publicaciones.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SpostService } from './Services/spost.service';
     InicioComponent,
     PerfilesComponent,
     ComentariosComponent,
-    PostComponent
+    PostComponent,
+    PublicacionesComponent
   ],
   imports: [
     BrowserModule,

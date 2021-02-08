@@ -16,4 +16,9 @@ export class SpostService {
     const path = 'https://jsonplaceholder.typicode.com/posts';
     return this.httpclient.get<comments[]>(path);
   }
+
+  getjustTask(idUser){
+    const path = 'https://jsonplaceholder.typicode.com/posts/?userId=$idUser';
+    return this.httpclient.get<comments[]>(path);
+  }
 }

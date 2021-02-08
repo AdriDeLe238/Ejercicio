@@ -5,6 +5,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { PerfilesComponent } from './perfiles/perfiles.component';
 import { PostComponent } from './post/post.component';
+import { PublicacionesComponent } from './publicaciones/publicaciones.component'; 
 
 const routes: Routes = [
   { path: 'inicio', component: SigninComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'coment', component:ComentariosComponent },
   { path: 'perfil', component: PerfilesComponent },
   { path: 'post', component: PostComponent },
+  { path: 'publicaciones', component: PublicacionesComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 

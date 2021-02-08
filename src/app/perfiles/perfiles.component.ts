@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SperfilService } from '../Services/sperfil.service';
 import { usuario } from '../Classes/usuario';
+import { SpostService } from '../Services/spost.service'; 
 
 @Component({
   selector: 'app-perfiles',
@@ -19,6 +20,8 @@ export class PerfilesComponent implements OnInit {
         return this.array = todos;
     });
   }
+
+  
   }
   /*getAll(){
     this.perfil.getAll()
