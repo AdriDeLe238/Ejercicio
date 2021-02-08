@@ -12,15 +12,19 @@ export class PerfilesComponent implements OnInit {
   constructor(private perfil : SperfilService) { }
   array : usuario[]; 
 
- getAll(){
-   this.perfil.getAll()
-   .subscribe( todos => {
-      console.log(todos);
-      return this.array = todos;
-   });
- }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.perfil.getAll()
+    .subscribe( todos => {
+        console.log(todos);
+        return this.array = todos;
+    });
   }
+  }
+  /*getAll(){
+    this.perfil.getAll()
+    .subscribe( todos => {
+        console.log(todos);
+        return this.array = todos;
+    });
+  }*/
 
-}
