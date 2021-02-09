@@ -10,8 +10,8 @@ export class ScomenService {
 
   constructor(private httpclient : HttpClient) { }
 
-  get(idPost){
-    const path = 'https://jsonplaceholder.typicode.com/posts/{idPost}/comments';
+  get(idPost: number){
+    const path = `https://jsonplaceholder.typicode.com/posts/${idPost}/comments`;
     return this.httpclient.get<comen[]>(path);
   }
 }

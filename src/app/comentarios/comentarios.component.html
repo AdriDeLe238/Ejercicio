@@ -1,1 +1,17 @@
 <app-menu></app-menu>
+<div >
+    <br>
+    <mat-card>
+            <div *ngFor="let item2 of array">
+                <mat-card>
+                    <span class="text-primary">Titulo: </span> <span>{{item2.title}}</span><br>
+                    <span class="text-primary">Nombre: </span><span>{{item2.body}}</span><br>
+                    <mat-tab-group >
+                        <mat-tab label="Comentario" *ngFor="let it of c">{{it.body}} </mat-tab>
+                    </mat-tab-group>
+                </mat-card>
+                <hr>
+            </div>
+        </mat-card>
+    <br>
+</div>
