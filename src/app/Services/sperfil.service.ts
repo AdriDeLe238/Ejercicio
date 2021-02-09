@@ -13,4 +13,9 @@ export class SperfilService {
     const path = 'https://jsonplaceholder.typicode.com/users';
     return this.httpclient.get<usuario[]>(path);
   }
+
+  justuser(id :number ){
+    const path = `https://jsonplaceholder.typicode.com/users/${id}`;
+    return this.httpclient.get<usuario>(path);
+  }
 }

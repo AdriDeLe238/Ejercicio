@@ -14,20 +14,22 @@ export class PostComponent implements OnInit {
 
   constructor(private spost : SpostService, private perfil : SperfilService) { }
 
-array : comments[]; 
+array : comments; 
 array2 : usuario[];
 
   ngOnInit(): void {
-    this.spost.getAllTasks()
+    this.spost.getjustTask(1)
     .subscribe( todos => {
        //console.log(todos);
        return this.array = todos;
     });
 
     this.perfil.getAll()
-    .subscribe( data => {
-        return this.array2 = data;
-    });
+    .subscribe( data =>{
+      return this.array2 = data; 
+    }
+
+    )
   }
 
 }
